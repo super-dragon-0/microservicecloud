@@ -1,0 +1,11 @@
+server: 
+  port: 3344
+  
+spring: 
+  application: 
+    name: microservicecloud-config
+  cloud: 
+    config: 
+      server: 
+        git: 
+          uri: git@github.com:super-dragon-0/microservicecloud-config.git #github的git仓库地址
