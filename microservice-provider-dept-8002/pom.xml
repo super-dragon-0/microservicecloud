@@ -5,7 +5,7 @@
     <artifactId>microservicecloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>microservice-provider-dept-8002</artifactId>
+  <artifactId>microservicecloud-provider-dept-8002</artifactId>
 <dependencies>
   	<dependency>
   		<groupId>com.jl.springcloud</groupId>
