@@ -1,0 +1,25 @@
+server: 
+  port: 9527
+  
+spring: 
+  application: 
+    name: microservicecloud-zuul-gateway
+zuul: 
+  prefix: /jl
+  ignored-services: "*"  #忽略服务名，多个服务可用"*",单个服务可用服务名
+  routes: 
+    dept.serviceId: microservicecloud-dept
+    dept.path: /mydept/**    
+eureka: 
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance: 
+    instance-id: gateway-9527.com   #自定义服务名称信息
+    prefer-ip-address: true   #访问路径可以是ip地址
+    
+info: 
+  app.name: jl-microservicecloud
+  company.name: www.jl.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
