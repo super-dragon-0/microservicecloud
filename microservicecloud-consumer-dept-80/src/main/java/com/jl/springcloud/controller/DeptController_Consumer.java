@@ -13,8 +13,8 @@ import com.jl.springcloud.entities.Dept;
 
 @RestController
 public class DeptController_Consumer {
-	private static final String REST_URL_PREFIX = "http://localhost:8001";
-	
+	//private static final String REST_URL_PREFIX = "http://localhost:8001";
+	private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
 	/**
 	 * 使用RestTemplate访问RestFul接口
 	 * (url,requestMap,ResponseBean.class)这三个参数分别代表
@@ -39,4 +39,8 @@ public class DeptController_Consumer {
 		return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list", List.class);
 	}
 
+	@RequestMapping("/consumer/dept/discovery")
+	public Object discovery() {
+		return restTemplate.getForObject(REST_URL_PREFIX+"/dept/discovery", Object.class);
+	}
 }
