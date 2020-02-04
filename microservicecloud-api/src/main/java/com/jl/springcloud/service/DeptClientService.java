@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.jl.springcloud.entities.Dept;
 
-@FeignClient(value="MICROSERVICECLOUD-DEPT")
+//@FeignClient(value="MICROSERVICECLOUD-DEPT")
+@FeignClient(value="MICROSERVICECLOUD-DEPT",fallbackFactory=DeptClientServiceFallbackFactory.class)
 public interface DeptClientService {
 	
 	@PostMapping("/dept/add")
