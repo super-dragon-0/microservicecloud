@@ -6,7 +6,7 @@
     <artifactId>microservicecloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>micoservicecloud-provider-dept-8001</artifactId>
+  <artifactId>microservicecloud-provider-dept-8001</artifactId>
   
   <dependencies>
   	<dependency>

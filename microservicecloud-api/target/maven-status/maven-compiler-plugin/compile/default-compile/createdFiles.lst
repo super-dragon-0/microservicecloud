@@ -1,1 +1,2 @@
 com\jl\springcloud\entities\Dept.class
+com\jl\springcloud\service\DeptClientService.class
